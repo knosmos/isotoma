@@ -24,9 +24,23 @@ class Circle {
             this.circle.cy = this.y;
             this.circle.r = this.r;
         }.bind(this);
+
+        /*
+        this.control2.control2.addDependency(this.control1.control);
+        this.control2.control2.update = function() {
+            this.x = this.control1.x - this.r;
+            this.y = this.control1.y;
+            this.control2.x = this.x;
+            this.control2.y = this.y;
+        }.bind(this);
+        */
+    }
+
+    render() {
+        return `\\draw (${this.x/100}, ${this.y/100}) circle (${this.r/100});`;
     }
 }
 
 document.getElementById("new-circle-btn").onclick = () => {
-    new Circle();
+    window.elements.push(new Circle());
 }

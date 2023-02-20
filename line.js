@@ -26,8 +26,12 @@ class Line {
             this.line.y2 = this.y2;
         }.bind(this);
     }
+
+    render() {
+        return `\\draw (${this.x/100},${this.y/100}) -- (${this.x2/100},${this.y2/100});`;
+    }
 }
 
 document.getElementById("new-line-btn").onclick = () => {
-    new Line();
+    window.elements.push(new Line());
 }

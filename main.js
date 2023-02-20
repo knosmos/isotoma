@@ -64,4 +64,6 @@ canvas.root.onclick = (event) => {
     canvas.root.onclick=null;
 }
 */
+
+window.elements = [];
 export { canvas, offsetCoords, scaleCoords, gridCoords };

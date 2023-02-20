@@ -29,6 +29,12 @@ svg .control .point {
     fill: #381c65 !important;
 }
 
+svg path, circle, rect {
+    stroke: #381c65 !important;
+    stroke-width: 1px;
+    fill: none;
+}
+
 ::-webkit-scrollbar {
   height: 10px;
   width: 10px;
