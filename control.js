@@ -1,4 +1,4 @@
-import { canvas, scaleCoords, gridCoords } from 'main.js';
+import { canvas, scaleCoords, gridCoords } from './main.js';
 
 class Control {
     constructor (x, y) {
