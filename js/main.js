@@ -4,20 +4,22 @@ let canvas = new Interactive("editor-canvas", {
     width: 700,
     height: 500
 });
+canvas.width = canvas.root.clientWidth;
+canvas.height = canvas.root.clientHeight;
 canvas.border = true;
 
 // Create grid
-let numCols = 35;
-let numRows = 25;
+let numCols = canvas.width / 20;
+let numRows = canvas.height / 20;
 for (let i=0; i<numCols; i++) {
     let x = i*20;
     let line = canvas.line(x, 0, x, canvas.height);
-    line.stroke = "lightgrey";
+    line.stroke = "#eee";
 }
 for (let i=0; i<numRows; i++) {
     let y = i*20;
     let line = canvas.line(0, y, canvas.width, y);
-    line.stroke = "lightgrey";
+    line.stroke = "#eee";
 }
 
 // Convert from mouse coords to grid coords

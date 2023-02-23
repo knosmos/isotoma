@@ -22,10 +22,12 @@ class Rect {
             this.y1 = this.tl.y;
             this.x2 = this.br.x;
             this.y2 = this.br.y;
-            this.rect.x = this.x1;
-            this.rect.y = this.y1;
-            this.rect.width = this.x2 - this.x1;
-            this.rect.height = this.y2 - this.y1;
+            
+            this.rect.x = Math.min(this.x1, this.x2);
+            this.rect.y = Math.min(this.y1, this.y2);
+
+            this.rect.width = Math.abs(this.x2 - this.x1) + 0.001; // avoid zero width/height
+            this.rect.height = Math.abs(this.y2 - this.y1) + 0.001;
         }.bind(this);
     }
 
