@@ -2,10 +2,17 @@
 
 ## [Browser-based TikZ editor](https://knosmos.github.io/isotoma)
 
-A browser-based editor for the [TikZ](http://www.texample.net/tikz/) language, which is used to create diagrams in LaTeX. It is currently in a very early stage of development; while it is already possible to create simple diagrams much faster than by hand, it is still fairly limited. Additionally, due to differences in the way TikZ and the browser-based SVG renderer handle certain shapes (particularly curves), the output is not always identical to the input.
+A browser-based editor for the [TikZ](http://www.texample.net/tikz/) language, which is used to create diagrams in LaTeX. It is currently in a very early stage of development; while it is already possible to create simple diagrams much faster than by hand, it is still fairly limited.
 
 Deployed at [knosmos.github.io/isotoma](https://knosmos.github.io/isotoma)
 
 ## Example
+![isotoma](https://user-images.githubusercontent.com/30610197/220826896-bd0a355f-1ec5-4ce6-a3ab-2269d1fa645f.png)
 
-![isotoma](https://user-images.githubusercontent.com/30610197/219992821-54fe61c4-0298-48b0-bfb5-e703b650003e.png)
+## Roadmap
+- [ ] More intuitive interface, selection/deletion of objects
+- [ ] Undo/redo functionality
+- [ ] Support for text/equations
+- [ ] Figure persistence
+- [x] Improved bezier drawing
+- [x] Minimal differences between TikZ rendering and Isotoma editor view
