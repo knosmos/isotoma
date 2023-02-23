@@ -12,6 +12,8 @@ class Line {
         this.control2 = new Control(this.x2, this.y2);
         this.line = canvas.line(this.x, this.y, this.x2, this.y2);
 
+        this.line.stroke = "#381c65";
+
         this.line.addDependency(this.control1.control);
         this.line.addDependency(this.control2.control);
         this.line.update = function() {
