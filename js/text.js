@@ -20,7 +20,7 @@ class Text {
     }
 
     render() {
-        return `\\draw (${this.x/100}, ${this.y/100}) node {${this.text.contents}};`;
+        return `\\draw (${this.x/100}, ${this.y/100}) node[right] {${this.text.contents}};`;
     }
 }
 
