@@ -7,12 +7,13 @@ A browser-based editor for the [TikZ](http://www.texample.net/tikz/) language, w
 Deployed at [knosmos.github.io/isotoma](https://knosmos.github.io/isotoma)
 
 ## Example
-![isotoma](https://user-images.githubusercontent.com/30610197/220826896-bd0a355f-1ec5-4ce6-a3ab-2269d1fa645f.png)
+![isotoma interface](https://user-images.githubusercontent.com/30610197/221038131-f0544837-0020-4214-996a-9fb4cf963713.png)
 
 ## Roadmap
 - [ ] More intuitive interface, selection/deletion of objects
 - [ ] Undo/redo functionality
-- [ ] Support for text/equations
+- [ ] Support equations
 - [ ] Figure persistence
+- [x] Support for text
 - [x] Improved bezier drawing
 - [x] Minimal differences between TikZ rendering and Isotoma editor view
