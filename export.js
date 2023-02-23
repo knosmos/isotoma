@@ -1,5 +1,3 @@
-
-
 function render(elements) {
     let text = '';
     console.log(elements);

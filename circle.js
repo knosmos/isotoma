@@ -1,5 +1,5 @@
-import { canvas } from '/main.js';
-import { Control } from '/control.js';
+import { canvas } from './main.js';
+import { Control } from './control.js';
 
 class Circle {
     constructor() {
