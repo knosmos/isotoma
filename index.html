@@ -2,18 +2,27 @@
 <html>
     <head>
         <title>isotoma - online TikZ editor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        
+        <!-- VectorJS -->
         <link rel="stylesheet" href="https://vectorjs.org/library.css">
 
+        <!-- Custom -->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="assets/logo.png">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-light nav-pills">
             <div class="container container-small">
                 <a class="navbar-brand" href="#">
-                    <img src="assets/isotoma.png" style="width: 150px">
+                    <img src="assets/isotoma.png" style="width: 120px">
+                    <sup style="color:#ccc"><em>beta</em></sup>
                 </a>
+                <a class="navbar-brand" href="https://github.com/knosmos/isotoma" style="color:#381c65">Source Code</a>
             </div>
         </nav>
         <div class="container container-small">
@@ -26,14 +35,19 @@
                         <button class="btn btn-outline-secondary" id="new-line-btn">Line</button>
                         <button class="btn btn-outline-secondary" id="new-circle-btn">Circle</button>
                         <button class="btn btn-outline-secondary" id="new-rect-btn">Rect</button>
-                        <!--<button class="btn btn-outline-secondary" id="new-curve-btn">Quadratic</button>-->
                         <button class="btn btn-outline-secondary" id="new-cubic-btn">Bezier</button>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="snap-grid" checked>
+                            <label class="form-check-label" for="snap-grid">
+                              Snap to Grid
+                            </label>
+                          </div>
                     </div>
                     <!--<div>
                         <input type="text" class="form-control" style="width:30%;display:inline-block" placeholder="Text">
                         <button class="btn btn-outline-danger">Delete</button>
                     </div>-->
-                    <br>
                     <div id="editor-canvas"></div>
                 </div>
                 <div class="col-4">
@@ -51,7 +65,7 @@
         <script src="./js/line.js" type="module"></script>
         <script src="./js/circle.js" type="module"></script>
         <script src="./js/rect.js" type="module"></script>
-        <script src="./js/bezier.js" type="module"></script>
+        <!--<script src="./js/bezier.js" type="module"></script>-->
         <script src="./js/cubic.js" type="module"></script>
         <script src="./js/export.js" type="module"></script>
     </body>

@@ -38,6 +38,10 @@ class Cubic {
             this.rg.x2 = this.r.x;
             this.rg.y2 = this.r.y;
         }.bind(this);
+
+        this.curve.onmouseclick = function() {
+            alert("hi!");
+        }.bind(this);
     }
 
     getPath() {

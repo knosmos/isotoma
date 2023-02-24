@@ -42,7 +42,7 @@ svg path, circle, rect {
 
 svg text {
     font-family: "Computer Modern Roman";
-    font-size: 24px;
+    font-size: 32px;
     fill: #381c65 !important;
 }
 
@@ -90,4 +90,9 @@ pre {
     --bs-btn-disabled-bg: transparent;
     --bs-btn-disabled-border-color: rgb(56, 28, 101);
     --bs-gradient: none;
+}
+
+.form-check-input:checked {
+    background-color: rgb(56, 28, 101);
+    border-color: rgb(56, 28, 101);
 }
