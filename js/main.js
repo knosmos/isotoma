@@ -44,28 +44,8 @@ function gridCoords(x, y) {
     let row = Math.round(y/20);
     return [col*20, row*20];
 }
-/*
-canvas.root.onclick = (event) => {
-    let x = event.clientX;
-    let y = event.clientY;
-    [x, y] = offsetCoords(x, y);
-    [x, y] = scaleCoords(x, y);
-    [x, y] = gridCoords(x, y);
-
-    let control = canvas.control(x, y);
-    let control2 = canvas.control(x, y);
-    control.addDependency(control2);
-    control.update = function() {
-        [this.x, this.y] = scaleCoords(this.x, this.y);
-        [this.x, this.y] = gridCoords(control2.x, control2.y);
-        
-        control2.x = this.x;
-        control2.y = this.y;
-    }
-
-    canvas.root.onclick=null;
-}
-*/
 
 window.elements = [];
+window.selectedElem;
+
 export { canvas, offsetCoords, scaleCoords, gridCoords };

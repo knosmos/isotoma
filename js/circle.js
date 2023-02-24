@@ -20,9 +20,12 @@ class Circle {
             this.y = this.control1.y;
             this.r = Math.sqrt(Math.pow(this.control1.x - this.control2.x, 2) + Math.pow(this.control1.y - this.control2.y, 2));
 
+            this.r = Math.round(this.r * 1000) / 1000;
+
             this.circle.cx = this.x;
             this.circle.cy = this.y;
             this.circle.r = this.r;
+            window.selectedElem = this;
         }.bind(this);
 
         /*
@@ -38,6 +41,12 @@ class Circle {
 
     render() {
         return `\\draw (${this.x/100}, ${this.y/100}) circle (${this.r/100});`;
+    }
+
+    remove() {
+        this.control1.remove();
+        this.control2.remove();
+        this.circle.remove();
     }
 }
 

@@ -35,7 +35,8 @@
                         <button class="btn btn-outline-secondary" id="new-line-btn">Line</button>
                         <button class="btn btn-outline-secondary" id="new-circle-btn">Circle</button>
                         <button class="btn btn-outline-secondary" id="new-rect-btn">Rect</button>
-                        <button class="btn btn-outline-secondary" id="new-cubic-btn">Bezier</button>
+                        <button class="btn btn-outline-secondary" id="new-curve-btn">Quadratic</button>
+                        <button class="btn btn-outline-secondary" id="new-cubic-btn">Cubic</button>
                         <br>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="snap-grid" checked>
@@ -44,19 +45,14 @@
                             </label>
                           </div>
                     </div>
-                    <!--<div>
-                        <input type="text" class="form-control" style="width:30%;display:inline-block" placeholder="Text">
-                        <button class="btn btn-outline-danger">Delete</button>
-                    </div>-->
                     <div id="editor-canvas"></div>
                 </div>
                 <div class="col-4">
                     <br>
-                    <h4>TikZ Output</h4>
-                    <code>
-                        <pre id="tikz-output">
-                        </pre>
-                    </code>
+                    <h4>TikZ Output </h4>
+                    <a id="copy-tikz">[copy]</a>
+                    <pre id="tikz-output">
+                    </pre>
                 </div>
             </div>
         </div>
@@ -65,8 +61,8 @@
         <script src="./js/line.js" type="module"></script>
         <script src="./js/circle.js" type="module"></script>
         <script src="./js/rect.js" type="module"></script>
-        <!--<script src="./js/bezier.js" type="module"></script>-->
+        <script src="./js/bezier.js" type="module"></script>
         <script src="./js/cubic.js" type="module"></script>
-        <script src="./js/export.js" type="module"></script>
+        <script src="./js/export.js"></script>
     </body>
 </html>

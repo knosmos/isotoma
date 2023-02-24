@@ -39,6 +39,8 @@ class Bezier {
             this.rg.y1 = this.c.y;
             this.rg.x2 = this.r.x;
             this.rg.y2 = this.r.y;
+
+            window.selectedElem = this;
         }.bind(this);
     }
 
@@ -53,6 +55,12 @@ class Bezier {
         let q3 = `(${this.r.x/100},${this.r.y/100})`;
 
         return `\\draw ${q0} .. controls ${q1} and ${q2} .. ${q3};`;
+    }
+
+    remove() {
+        for (let i of [this.l, this.c, this.r, this.lg, this.rg, this.curve]) {
+            i.remove();
+        }
     }
 }
 

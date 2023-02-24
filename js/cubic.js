@@ -37,6 +37,8 @@ class Cubic {
             this.rg.y1 = this.c2.y;
             this.rg.x2 = this.r.x;
             this.rg.y2 = this.r.y;
+
+            window.selectedElem = this;
         }.bind(this);
 
         this.curve.onmouseclick = function() {
@@ -55,6 +57,12 @@ class Cubic {
         let q3 = `(${this.r.x/100},${this.r.y/100})`;
 
         return `\\draw ${q0} .. controls ${q1} and ${q2} .. ${q3};`;
+    }
+
+    remove() {
+        for (let i of [this.l, this.c, this.c2, this.r, this.lg, this.rg, this.curve]) {
+            i.remove();
+        }
     }
 }
 

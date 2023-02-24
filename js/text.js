@@ -16,11 +16,19 @@ class Text {
             
             this.text.x = this.x;
             this.text.y = this.y;
+
+            window.selectedElem = this;
         }.bind(this);
     }
 
     render() {
         return `\\draw (${this.x/100}, ${this.y/100}) node[right] {${this.text.contents}};`;
+    }
+
+    remove() {
+        for (let i of [this.control, this.text]) {
+            i.remove();
+        }
     }
 }
 

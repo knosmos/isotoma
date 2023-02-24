@@ -25,6 +25,11 @@ class Control {
             this.control.y = this.y;
         }.bind(this);
     }
+
+    remove() {
+        this.control.remove();
+        this.control2.remove();
+    }
 }
 
 export { Control };

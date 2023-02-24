@@ -28,11 +28,19 @@ class Rect {
 
             this.rect.width = Math.abs(this.x2 - this.x1) + 0.001; // avoid zero width/height
             this.rect.height = Math.abs(this.y2 - this.y1) + 0.001;
+
+            window.selectedElem = this;
         }.bind(this);
     }
 
     render() {
         return `\\draw (${this.x1/100},${this.y1/100}) rectangle (${this.x2/100},${this.y2/100});`;
+    }
+
+    remove() {
+        for (let i of [this.tl, this.br, this.rect]) {
+            i.remove();
+        }
     }
 }
 

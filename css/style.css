@@ -96,3 +96,23 @@ pre {
     background-color: rgb(56, 28, 101);
     border-color: rgb(56, 28, 101);
 }
+
+a {
+    cursor: pointer;
+}
+
+.selected-elem {
+    color: white;
+    background-color: #381c65;
+    border: 1px solid #381c65;
+}
+
+.delete-btn {
+    border: 1px solid #381c65;
+    color: #381c65;
+    background-color: transparent;
+    cursor: pointer;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-sizing: border-box;
+}

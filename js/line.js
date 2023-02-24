@@ -26,11 +26,19 @@ class Line {
             this.line.y1 = this.y;
             this.line.x2 = this.x2;
             this.line.y2 = this.y2;
+
+            window.selectedElem = this;
         }.bind(this);
     }
 
     render() {
         return `\\draw (${this.x/100},${this.y/100}) -- (${this.x2/100},${this.y2/100});`;
+    }
+
+    remove() {
+        for (let i of [this.control1, this.control2, this.line]) {
+            i.remove();
+        }
     }
 }
 
