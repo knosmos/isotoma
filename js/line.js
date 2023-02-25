@@ -28,7 +28,11 @@ class Line {
             this.line.y2 = this.y2;
 
             window.selectedElem = this;
+            window.generate();
         }.bind(this);
+
+        window.selectedElem = this;
+        setTimeout(() => window.generate(), 100);
     }
 
     render() {

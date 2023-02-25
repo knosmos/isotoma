@@ -32,6 +32,7 @@ ${text}\\end{tikzpicture}
 function delElem(i) {
     elements[i].remove();
     window.elements.splice(i,1);
+    generate();
 }
 
 let isOnDiv = false;
@@ -40,11 +41,10 @@ let tikzElem = document.getElementById("tikz-output");
 tikzElem.addEventListener("mouseenter", () => {isOnDiv=true;});
 tikzElem.addEventListener("mouseout", () => {isOnDiv=false;});
 
-setInterval(() => {
-    if (isOnDiv) return;
+function generate() {
     let tikz = render(window.elements);
-    document.getElementById("tikz-output").innerHTML = tikz;
-}, 500);
+    tikzElem.innerHTML = tikz;
+}
 
 document.getElementById("copy-tikz").onclick = () => {
     let text = renderTextOnly(window.elements);

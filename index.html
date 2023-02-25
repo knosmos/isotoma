@@ -11,6 +11,9 @@
         <!-- VectorJS -->
         <link rel="stylesheet" href="https://vectorjs.org/library.css">
 
+        <!-- MathJax -->
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+
         <!-- Custom -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="assets/logo.png">
@@ -27,10 +30,12 @@
         </nav>
         <div class="container container-small">
             <div class="row">
+                <!-- Editor -->
                 <div class="col-8">
                     <br>
                     <h4>Editor</h4>
                     <div>
+                        <!-- Button Panel -->
                         <button class="btn btn-outline-secondary" id="new-text-btn">Text</button>
                         <button class="btn btn-outline-secondary" id="new-line-btn">Line</button>
                         <button class="btn btn-outline-secondary" id="new-circle-btn">Circle</button>
@@ -38,15 +43,19 @@
                         <button class="btn btn-outline-secondary" id="new-curve-btn">Quadratic</button>
                         <button class="btn btn-outline-secondary" id="new-cubic-btn">Cubic</button>
                         <br>
+
+                        <!-- Snap to Grid -->
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="snap-grid" checked>
-                            <label class="form-check-label" for="snap-grid">
-                              Snap to Grid
-                            </label>
+                            <label class="form-check-label" for="snap-grid">Snap to Grid</label>
                           </div>
                     </div>
+
+                    <!-- Editor Canvas -->
                     <div id="editor-canvas"></div>
                 </div>
+
+                <!-- TikZ Output -->
                 <div class="col-4">
                     <br>
                     <h4>TikZ Output </h4>
@@ -56,6 +65,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Scripts -->
         <script src="./js/main.js" type="module"></script>
         <script src="./js/text.js" type="module"></script>
         <script src="./js/line.js" type="module"></script>

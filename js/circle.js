@@ -26,6 +26,7 @@ class Circle {
             this.circle.cy = this.y;
             this.circle.r = this.r;
             window.selectedElem = this;
+            window.generate();
         }.bind(this);
 
         /*
@@ -37,6 +38,9 @@ class Circle {
             this.control2.y = this.y;
         }.bind(this);
         */
+
+        window.selectedElem = this;
+        setTimeout(() => window.generate(), 100);
     }
 
     render() {

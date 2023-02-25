@@ -39,11 +39,15 @@ class Cubic {
             this.rg.y2 = this.r.y;
 
             window.selectedElem = this;
+            window.generate();
         }.bind(this);
 
         this.curve.onmouseclick = function() {
             alert("hi!");
         }.bind(this);
+
+        window.selectedElem = this;
+        setTimeout(() => window.generate(), 100);
     }
 
     getPath() {

@@ -30,7 +30,11 @@ class Rect {
             this.rect.height = Math.abs(this.y2 - this.y1) + 0.001;
 
             window.selectedElem = this;
+            window.generate();
         }.bind(this);
+
+        window.selectedElem = this;
+        setTimeout(() => window.generate(), 100);
     }
 
     render() {

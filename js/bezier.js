@@ -41,7 +41,11 @@ class Bezier {
             this.rg.y2 = this.r.y;
 
             window.selectedElem = this;
+            window.generate()
         }.bind(this);
+
+        window.selectedElem = this;
+        setTimeout(() => window.generate(), 100);
     }
 
     getPath() {
