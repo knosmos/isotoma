@@ -10,10 +10,7 @@
         
         <!-- VectorJS -->
         <link rel="stylesheet" href="https://vectorjs.org/library.css">
-
-        <!-- MathJax -->
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"></script>
-
+        
         <!-- Custom -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="assets/logo.png">
@@ -36,23 +33,61 @@
                     <h4>Editor</h4>
                     <div>
                         <!-- Button Panel -->
-                        <button class="btn btn-outline-secondary" id="new-text-btn">Text</button>
-                        <button class="btn btn-outline-secondary" id="new-line-btn">Line</button>
-                        <button class="btn btn-outline-secondary" id="new-circle-btn">Circle</button>
-                        <button class="btn btn-outline-secondary" id="new-rect-btn">Rect</button>
-                        <button class="btn btn-outline-secondary" id="new-curve-btn">Quadratic</button>
-                        <button class="btn btn-outline-secondary" id="new-cubic-btn">Bézier</button>
-                        <br>
+                        <button class="btn btn-outline-secondary" id="new-text-btn" data-toggle="tooltip" title="Text" data-trigger="hover"><img src=assets/text.svg></button>
+                        <button class="btn btn-outline-secondary" id="new-line-btn" data-toggle="tooltip" title="Line"><img src=assets/line.svg></button>
+                        <button class="btn btn-outline-secondary" id="new-circle-btn" data-toggle="tooltip" title="Circle"><img src=assets/circle.svg></button>
+                        <button class="btn btn-outline-secondary" id="new-rect-btn" data-toggle="tooltip" title="Rectangle"><img src=assets/rect.svg></button>
+                        <button class="btn btn-outline-secondary" id="new-curve-btn" data-toggle="tooltip" title="Quadratic Bezier"><img src=assets/quadratic.svg></button>
+                        <button class="btn btn-outline-secondary" id="new-cubic-btn" data-toggle="tooltip" title="Cubic Bezier"><img src=assets/cubic.svg></button>
+                        <!-- Line Style -->
+                        <!--
+                        <div style="float:right">
+                            <span class="form-group form-inline">
+                                <label>
+                                    Stroke
+                                </label>
+                                <select class="btn form-select">
+                                    <option selected>Solid</option>
+                                    <option value="1">Dashed</option>
+                                    <option value="2">Dotted</option>
+                                </select>
+                            </span>
+                            <span class="form-group form-inline">
+                                <label>
+                                    Fill
+                                </label>
+                                <select class="btn form-select">
+                                    <option selected>Outline</option>
+                                    <option value="1">Solid</option>
+                                    <option value="2">Hatched</option>
+                                </select>
+                            </span>
+                        </div>-->
+                        <br clear="both">
 
                         <!-- Snap to Grid -->
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="snap-grid" checked>
                             <label class="form-check-label" for="snap-grid">Snap to Grid</label>
-                          </div>
+                        </div>
                     </div>
 
                     <!-- Editor Canvas -->
                     <div id="editor-canvas"></div>
+
+                    <!-- Tooltip Wrangling -->
+                    <script>
+                        document.querySelectorAll('[data-toggle="tooltip"]').forEach(function (element) {
+                            new bootstrap.Tooltip(element);
+                        });
+
+                        // hide tooltips if mouse goes inside editor panel
+                        document.getElementById("editor-canvas").addEventListener("mouseover", function() {
+                            document.querySelectorAll('[data-toggle="tooltip"]').forEach(function (element) {
+                                bootstrap.Tooltip.getInstance(element).hide();
+                            });
+                        });
+                    </script>
                 </div>
 
                 <!-- TikZ Output -->

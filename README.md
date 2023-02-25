@@ -16,7 +16,7 @@ Deployed at [knosmos.github.io/isotoma](https://knosmos.github.io/isotoma)
 - [x] Support for text
 - [x] Object highlighting and deletion
 - [x] More intuitive interface
-- [x] TikZ styles support
+- [ ] TikZ styles support
 - [ ] Selection of objects
 - [ ] Undo/redo functionality
 - [ ] Support for equations (MathJax)

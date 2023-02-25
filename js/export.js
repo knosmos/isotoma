@@ -42,7 +42,7 @@ function generate() {
     tikzElem.innerHTML = tikz;
 }
 
-setTimeout(() => generate(), 100); // wait for initialization to complete
+setTimeout(() => generate(), 500); // wait for initialization to complete
 
 document.getElementById("copy-tikz").onclick = () => {
     let text = renderTextOnly(window.elements);

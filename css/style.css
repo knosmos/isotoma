@@ -129,3 +129,30 @@ a {
     background-color: #381c65;
     color: white;
 }
+
+.form-select {
+    border: 1px solid #381c65;
+    color: #381c65;
+    display: inline-block;
+    width: auto;
+    text-align: left;
+    padding-right: 1.75rem;
+}
+
+
+.btn img {
+    width: 20px;
+    transition: filter 0.1s;
+}
+
+.btn:hover img, .btn:focus img {
+    filter: invert(100%) saturate(0%) hue-rotate(0deg) brightness(10000);
+}
+
+.tooltip > .tooltip-inner {
+    background-color: #381c65;
+}
+
+.tooltip-arrow::before {
+  border-top-color: #381c65 !important;
+}
