@@ -13,38 +13,44 @@ class Circle {
         this.circle.stroke = "black";
         this.circle.fill = "none";
 
-        this.circle.addDependency(this.control1.control);
+        this.x_diff = this.control1.x - this.control2.x;
+        this.y_diff = this.control1.y - this.control2.y;
+
+        //this.circle.addDependency(this.control1.control);
         this.circle.addDependency(this.control2.control);
         this.circle.update = function() {
-            this.x = this.control1.x;
-            this.y = this.control1.y;
             this.r = Math.sqrt(Math.pow(this.control1.x - this.control2.x, 2) + Math.pow(this.control1.y - this.control2.y, 2));
 
-            this.r = Math.round(this.r * 1000) / 1000;
-
-            this.circle.cx = this.x;
-            this.circle.cy = this.y;
+            this.x_diff = this.control1.x - this.control2.x;
+            this.y_diff = this.control1.y - this.control2.y;
+            
             this.circle.r = this.r;
             window.selectedElem = this;
             window.generate();
         }.bind(this);
 
-        /*
-        this.control2.control2.addDependency(this.control1.control);
+        this.control2.control2.addDependency(this.control1.control2);
         this.control2.control2.update = function() {
-            this.x = this.control1.x - this.r;
+
+            this.x = this.control1.x;
             this.y = this.control1.y;
-            this.control2.x = this.x;
-            this.control2.y = this.y;
+
+            this.control2.control2.x = this.control1.x - this.x_diff;
+            this.control2.control2.y = this.control1.y - this.y_diff;
+
+            this.circle.cx = this.x;
+            this.circle.cy = this.y;
+
+            window.selectedElem = this;
+            window.generate();
         }.bind(this);
-        */
 
         window.selectedElem = this;
         setTimeout(() => window.generate(), 100);
     }
 
     render() {
-        return `\\draw (${this.x/100}, ${this.y/100}) circle (${this.r/100});`;
+        return `\\draw (${this.x/100}, ${this.y/100}) circle (${Math.round(this.r * 1000) / 10000});`;
     }
 
     remove() {
