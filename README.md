@@ -10,10 +10,16 @@ Deployed at [knosmos.github.io/isotoma](https://knosmos.github.io/isotoma)
 ![isotoma interface](https://user-images.githubusercontent.com/30610197/221038131-f0544837-0020-4214-996a-9fb4cf963713.png)
 
 ## Roadmap
-- [ ] More intuitive interface, selection/deletion of objects
-- [ ] Undo/redo functionality
-- [ ] Support equations
-- [ ] Figure persistence
-- [x] Support for text
-- [x] Improved bezier drawing
+- [x] Basic drawing functionality and TikZ export
 - [x] Minimal differences between TikZ rendering and Isotoma editor view
+- [x] Improved bezier drawing
+- [x] Support for text
+- [x] Object highlighting and deletion
+- [x] More intuitive interface
+- [x] TikZ styles support
+- [ ] Selection of objects
+- [ ] Undo/redo functionality
+- [ ] Support for equations (MathJax)
+- [ ] Figure persistence
+- [ ] TikZ import
+- [ ] TikZ library support
