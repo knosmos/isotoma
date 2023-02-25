@@ -35,16 +35,14 @@ function delElem(i) {
     generate();
 }
 
-let isOnDiv = false;
 let tikzElem = document.getElementById("tikz-output");
-
-tikzElem.addEventListener("mouseenter", () => {isOnDiv=true;});
-tikzElem.addEventListener("mouseout", () => {isOnDiv=false;});
 
 function generate() {
     let tikz = render(window.elements);
     tikzElem.innerHTML = tikz;
 }
+
+setTimeout(() => generate(), 100); // wait for initialization to complete
 
 document.getElementById("copy-tikz").onclick = () => {
     let text = renderTextOnly(window.elements);

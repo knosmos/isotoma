@@ -15,7 +15,15 @@ html, body {
 
 @media screen and (max-width: 768px) {
     .container-small {
-        max-width: 100%;
+        max-width: 100% !important;
+    }
+
+    .col-8 {
+        width: 100% !important;
+    }
+
+    .col-4 {
+        width: 100% !important;
     }
 }
 
@@ -65,7 +73,7 @@ nav {
 }
 
 pre {
-    height: 80vh;
+    height: 75vh;
     overflow: auto;
     background-color: rgb(250, 250, 250);
     color: rgb(56, 28, 101);
@@ -115,4 +123,9 @@ a {
     padding-left: 4px;
     padding-right: 4px;
     box-sizing: border-box;
+}
+
+.delete-btn:hover {
+    background-color: #381c65;
+    color: white;
 }
