@@ -2,7 +2,7 @@
 
 ## [Browser-based TikZ editor](https://knosmos.github.io/isotoma)
 
-A browser-based editor for the [TikZ](http://www.texample.net/tikz/) language, which is used to create diagrams in LaTeX. It is currently in a very early stage of development; while it is already possible to create simple diagrams much faster than by hand, it is still fairly limited.
+A browser-based editor for the [TikZ](http://www.texample.net/tikz/) language, which is used to create diagrams in LaTeX. It is currently in an early stage of development; while it is already possible to create simple diagrams much faster than by hand, it is still fairly limited.
 
 Deployed at [knosmos.github.io/isotoma](https://knosmos.github.io/isotoma)
 
@@ -23,3 +23,6 @@ Deployed at [knosmos.github.io/isotoma](https://knosmos.github.io/isotoma)
 - [ ] Figure persistence
 - [ ] TikZ import
 - [ ] TikZ library support
+
+## License
+[MIT License](LICENSE)
