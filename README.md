@@ -7,7 +7,11 @@ A browser-based editor for the [TikZ](http://www.texample.net/tikz/) language, w
 Deployed at [knosmos.github.io/isotoma](https://knosmos.github.io/isotoma)
 
 ## Example
-![isotoma interface](https://user-images.githubusercontent.com/30610197/221038131-f0544837-0020-4214-996a-9fb4cf963713.png)
+### Interface
+![image](https://user-images.githubusercontent.com/30610197/221387632-762c6051-5a26-42cd-ba82-1051f54779be.png)
+
+### Rendered Output
+![image](https://user-images.githubusercontent.com/30610197/221387647-897994e2-dbcf-4d13-b109-96473eb6d1c5.png)
 
 ## Roadmap
 - [x] Basic drawing functionality and TikZ export

@@ -50,7 +50,7 @@ class Circle {
     }
 
     render() {
-        return `\\draw (${this.x/100}, ${this.y/100}) circle (${Math.round(this.r * 1000) / 10000});`;
+        return `\\draw (${this.x/100}, ${this.y/100}) circle (${Math.round(this.r * 100) / 10000});`;
     }
 
     remove() {
