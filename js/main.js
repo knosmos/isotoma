@@ -1,4 +1,5 @@
-import Interactive from "https://vectorjs.org/interactive.js";
+// import Interactive from "https://vectorjs.org/interactive.js";
+import Interactive from "vector/interactive.js";
 
 let canvas = new Interactive("editor-canvas", {
     width: 700,
